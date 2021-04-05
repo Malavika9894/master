@@ -1,0 +1,16 @@
+<aura:component >
+	<aura:attribute name="abc" type="string" default="My first component"/>
+    <div>
+    <p>
+        My first attribute is {!v.abc}
+        </p>
+    </div>
+    
+    <aura:attribute name="Testatt" type="string"/>
+    
+    <lightning:input value="{!v.Testatt}"/>
+    
+    This attribute holds ---> {!v.Testatt}
+    <lightning:button name="Submit" label="Submit" onclick="{!c.Myfirstfunction}"/>
+    
+</aura:component>

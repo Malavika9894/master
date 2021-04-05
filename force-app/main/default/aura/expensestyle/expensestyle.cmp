@@ -1,0 +1,16 @@
+<aura:component>
+    <aura:attribute name = "newExpense" type ="Expense__c"/>
+    My Expenses:
+    <lightning:input label="Name"
+                     name="expensename"
+                     value="{!v.newExpense.Name}"/>
+    <lightning:input label="Amount"
+                     name="expenseamount"
+                     value="{!v.newExpense.Amount__c}"/>
+    <lightning:input label="Client"
+                     name="expenseclient"
+                     value="{!v.newExpense.Client__c}"
+                     placeholder="ABC Co."/>
+    <lightning:button label="Create Expense"
+                      onClick="{!c.clickCreate}"/>
+</aura:component>

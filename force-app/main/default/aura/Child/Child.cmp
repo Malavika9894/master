@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="company" type="String" default="Rahul "/>
+    <aura:handler value="this" name="init" action="{!c.handleNameEvent}"/>
+     
+    <aura:registerEvent name="NameDataEvent" type="c:NameEvent" />
+</aura:component>

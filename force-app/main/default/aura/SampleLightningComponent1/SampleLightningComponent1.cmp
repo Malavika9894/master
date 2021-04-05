@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="abc" type="string" default="My first component"/>
+    <div>
+    <p>
+        Hello World
+     </p>
+    </div>
+	
+</aura:component>

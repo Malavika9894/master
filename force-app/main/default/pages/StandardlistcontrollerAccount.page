@@ -1,0 +1,15 @@
+<apex:page controller="Standardsetcontrollerclass">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockTable value="{!accounts}" var="ac">
+<apex:Column value="{!ac.Name}"/>
+<apex:Column value="{!ac.Id}"/>
+<apex:Column value="{!ac.Type}"/>
+</apex:pageBlockTable>
+<apex:commandButton value="First" action="{!setacc.first}"/>
+<apex:commandButton value="Next" action="{!setacc.next}"/>
+</apex:pageBlock>
+</apex:form>
+
+  
+</apex:page>

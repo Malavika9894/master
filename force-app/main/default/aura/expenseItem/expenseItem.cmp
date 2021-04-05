@@ -1,0 +1,29 @@
+<aura:component >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <aura:attribute name="test" type="String"/>
+    The string is: {!v.test}
+    <aura:attribute name='expense' type='Expense__c'/>
+    <p>Amount:
+        <lightning:formattedNumber value = '{!v.expense.Amount__c}' style = 'currency'/>
+    </p>
+    <p>
+        Client: {!v.expense.Client__c}
+    </p>
+    <p>
+        <lightning:input type='toogle' label='Reimbursed' name='reimbursed' checked='{!v.expense.Reimbursed__c}'/>
+    </p>
+    <aura:attribute name="message" type="list" default="['list1','list2','list3']"/>
+    <p><c:helloMessage message="{!v.message[0]}"/></p>
+    <p><c:helloMessage message="{!v.message[1]}"/></p>
+    <aura:if isTrue="{!$Browser.isIPhone}">
+        <p><c:helloMessage message="{!v.message[0]}"/></p>
+    <aura:set attribute="else">
+        <p><c:helloMessage message="{!v.message[1]}"/></p>
+        </aura:set>       
+    </aura:if>
+    <p>Iteration starts</p>
+        <aura:iteration items="{!v.messages}" var="msg">
+        <p><c:helloMessage message="{!msg}"/></p>
+    </aura:iteration>
+	
+</aura:component>

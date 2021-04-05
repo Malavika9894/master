@@ -1,0 +1,26 @@
+<apex:page standardController="Account" recordSetVar="Acclist">
+    <apex:form >
+    	<apex:pageBlock >
+        <apex:pageBlockTable value="{!Acclist}" var="a">
+            <apex:column value="{!a.Name}"/>
+            <apex:column value="{!a.Rating}"/>
+            <apex:column value="{!a.Phone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:dataTable value="{!Acclist}" var="dt">
+            <apex:column value="{!dt.Name}"/>
+            <apex:column value="{!dt.Rating}"/>
+            <apex:column value="{!dt.Phone}"/>   
+        </apex:dataTable>
+        <apex:dataList value="{!Acclist}" var="dl">
+            <apex:outputField value="{!dl.Name}"/>
+            <apex:outputField value="{!dl.Rating}"/>
+            <apex:outputField value="{!dl.Phone}"/>
+         </apex:dataList>
+        <apex:repeat value="{!Acclist}" var="r">
+            <apex:outputField value="{!r.Name}"/>
+            <apex:outputField value="{!r.Rating}"/>
+            <apex:outputField value="{!r.Phone}"/><BR/>      
+        </apex:repeat>       
+    </apex:form>   
+</apex:page>

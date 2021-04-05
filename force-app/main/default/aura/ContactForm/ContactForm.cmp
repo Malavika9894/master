@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" controller="ComponentController">
+    
+    
+    <aura:attribute name="Lastname" type="String" default=""/>
+    <aura:attribute name="Birthdate" type="String" default=""/>
+    <aura:attribute name="Country" type="String" default=""/>
+    <aura:attribute name="msg" type="String" default=""/>
+    
+    <div class="slds-border_top"/>
+    <div class=""><center>Contact Form</center></div>
+    <lightning:input name ="Lastname" value = "{!v.Lastname}" label="Last Name" maxlength="20"/>
+    <lightning:input name ="Birthdate" value = "{!v.Birthdate}" label="Birthdate" type="Date"/>
+    <lightning:input name ="Country" value = "{!v.Country}" label="Country" maxlength="10"/>
+    <lightning:input name ="msg" value = "{!v.msg}" label="Message" maxlength="10"/>
+    
+    <lightning:button variant="brand" label="Save" onclick="{!c.Submitform}"/>
+    
+    
+    
+</aura:component>

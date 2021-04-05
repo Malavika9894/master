@@ -1,0 +1,11 @@
+<apex:page Controller="LoadAccount" >
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockTable value="{!Acc}" var="item">
+<apex:column value="{!item.name}"/>
+
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

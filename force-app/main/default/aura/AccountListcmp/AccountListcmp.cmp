@@ -1,0 +1,7 @@
+<aura:component controller="AccountList">
+    <aura:handler name="init" action="doInit" value="{!this}"/>
+    <aura:attribute name="account"  type="Account"/>
+    ID:<aura:attribute name="ID" type="String"/> {!v.account.id}
+    Name:<aura:attribute name="name" type="String"/>{!v.account.name}
+	
+</aura:component>

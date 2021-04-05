@@ -1,0 +1,4 @@
+<aura:component >
+	
+    <aura:attribute type="String" name="Email"></aura:attribute>
+</aura:component>
